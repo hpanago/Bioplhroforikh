@@ -21,29 +21,29 @@ while i<len(RNA):
    c_bond=first_of_the_bond+second_of_the_bond;
    if bond==c_bond:
     if c_bond=="UA" :
-	  maxUA+=1;
+        maxUA+=1;
     elif c_bond=="CG" :
-	  maxCG+=1;	
+        maxCG+=1;	
     elif c_bond=="GC" :
-	  maxGC+=1;	
+        maxGC+=1;	
     elif c_bond=="AU" :
-	  maxAU+=1;
+        maxAU+=1;
    elif c_bond!=bond :
     if c_bond=="UA" :
-      max_bonds[0]=maxUA;
-	  maxUA=0
-	elif c_bond=="CG" :
-	 max_bonds[1]=maxCG;	
-	 maxCG=0	
-	elif c_bond=="GC" :
-	  max_bonds[2]=maxGC;	
-	  maxGC=0	
-	elif c_bond=="AU" :
-	  max_bonds[3]=maxAU
-	  maxAU=0
-   bond=c_bond
-   print(c_bond)
-   i+=1
+        max_bonds[0]=maxUA;
+        maxUA=0
+    elif c_bond=="CG" :
+        max_bonds[1]=maxCG;	
+        maxCG=0	
+    elif c_bond=="GC" :
+        max_bonds[2]=maxGC;	
+        maxGC=0	
+    elif c_bond=="AU" :
+        max_bonds[3]=maxAU
+        maxAU=0
+        bond=c_bond
+        print(c_bond)
+        i+=1
 for x in max_bonds :
   if max_bonds[i]>max:
     max=max_bonds[i]
