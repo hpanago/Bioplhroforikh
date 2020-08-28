@@ -135,6 +135,8 @@ both_less(nucleo_1, nucleo_2, round)
 
 
 explanation="""
+Explanation:
+
 Οπότε σύμφωνα με τα παραπάνω πειράματα,
 υπάρχουν οι εξής εκδοχές(ζεύγη):
 (θα αναφερθώ στα μήκη του εκάστοτε νουκλεοτιδίου ώς m και n),
@@ -183,4 +185,4 @@ explanation="""
 """
 
 
-
+print(explanation)
