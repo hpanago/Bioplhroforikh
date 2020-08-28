@@ -1,5 +1,7 @@
-nucleo_1="GAAGGCT"
-nucleo_2="GGCT"
+nucleo_1="ACC"
+nucleo_2="ACAAG"
+print("lenght1" , len(nucleo_1))
+print("lenght2" , len(nucleo_2))
 
 def remove_from_bigger(nucleo_1, nucleo_2):
     if len(nucleo_1)>len(nucleo_2):
@@ -49,9 +51,6 @@ def first_most(nucleo_1, nucleo_2, round):
         nucleo_1, nucleo_2=remove_from_smaller(nucleo_1, nucleo_2)
         print(nucleo_1)
         print(nucleo_2)
-        if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 2 wins")
-            break
         round+=1
 
 
@@ -77,9 +76,6 @@ def both_most(nucleo_1, nucleo_2, round):
         nucleo_1, nucleo_2=remove_from_bigger(nucleo_1, nucleo_2)
         print(nucleo_1)
         print(nucleo_2)
-        if len(nucleo_1)==0 or len(nucleo_2)==0:
-            print("player 2 wins")
-            break
         round+=1
         
 both_most(nucleo_1, nucleo_2, round)
@@ -155,8 +151,8 @@ Explanation:
 αναφέρεται στην μέθοδο που ο παίκτης επιλέγει να αφαιρεσει 1 νουκλεοτίδιο απο
 την αλλήλουχία με τα περισσότερα και 2 απο την αλληλουχια με τα περισσότερα)
 
-5: παικτης1=αφαιρεί περισσότερα και παίκτης2=αφαιρεί περισσότερα
-6: παικτης1=αφαιρεί περισσότερα και παίκτης2=αφαιρεί λιγότερα
+5: παικτης1=αφαιρεί περισσότερα και παίκτης2=αφαιρεί λιγότερα
+6: παικτης1=αφαιρεί περισσότερα και παίκτης2=αφαιρεί περισσότερα
 7: παικτης1=αφαιρεί λιγότερα και παίκτης2=αφαιρεί περισσοτερα
 8: παικτης1=αφαιρεί λιγότερα και παίκτης2=αφαιρεί λιγότερα
 
@@ -182,6 +178,12 @@ Explanation:
 | 4 με 6                        | παίκτης2 |
 | 4 με 7                        | παίκτης1 |
 | 4 με 8                        | παίκτης2 |
+
+Οπότε σε κάθε γύρο θα πρέπει να υπολογίζεται εκ νέου το ποιος παικτης παίζει
+και σε ποιον συνδυασμο ανηκουν οι αλληλουχίες εκεινης της στιγμής για να βγει
+ο νικητής(σύμφωνα πάντα με τον παραπάνω πίνακα).
+
+
 """
 
 
